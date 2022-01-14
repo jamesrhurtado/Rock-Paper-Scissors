@@ -34,27 +34,20 @@ function playRound(computerSelection, playerSelection){
 
 
 const buttons = document.querySelectorAll('button')
+const finalResult = document.querySelector('div')
+const cScore = document.querySelector('.computer-score')
+const pScore = document.querySelector('.player-score')
+const fScore = document.querySelector('.final-score')
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-        console.log(playRound(computerPlay(), button.classList.value))
+        finalResult.textContent = playRound(computerPlay(), button.classList.value)
+        cScore.textContent = computerScore;
+        pScore.textContent = playerScore;
+        if(computerScore >= 5){
+            fScore.textContent = "COMPUTER WINS!";
+        } else if (playerScore >= 5){
+            fScore.textContent = "YOU WIN!";
+        };
     });
 });
 
-
-/*
-function game(){
-    for(let i = 0; i<5; i++){
-        const playerSelection = window.prompt("Type your option: ");
-        console.log(playRound(computerSelection, playerSelection));
-    }
-    if(computerScore > playerScore){
-        console.log("Computer win!")
-    } else if(computerScore < playerScore){
-        console.log("You win!");
-    } else{
-        console.log("Welp");
-    }
-}
-
-game();
-*/
