@@ -1,5 +1,3 @@
-console.log("Hello, world!");
-
 
 function computerPlay(){
     let items = ["Rock", "Paper", "Scissors"];
@@ -34,8 +32,16 @@ function playRound(computerSelection, playerSelection){
     }
 }
 
-const computerSelection = computerPlay();
 
+const buttons = document.querySelectorAll('button')
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        console.log(playRound(computerPlay(), button.classList.value))
+    });
+});
+
+
+/*
 function game(){
     for(let i = 0; i<5; i++){
         const playerSelection = window.prompt("Type your option: ");
@@ -51,3 +57,4 @@ function game(){
 }
 
 game();
+*/
