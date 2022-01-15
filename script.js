@@ -34,7 +34,7 @@ function playRound(computerSelection, playerSelection){
 
 
 const buttons = document.querySelectorAll('button')
-const finalResult = document.querySelector('div')
+const finalResult = document.querySelector('.final-result')
 const cScore = document.querySelector('.computer-score')
 const pScore = document.querySelector('.player-score')
 const fScore = document.querySelector('.final-score')

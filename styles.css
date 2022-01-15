@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+
+.heading-title{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 5em;
+}
+
+.buttons-rps{
+    display: flex;
+    gap: 5em;
+    justify-content: center;
+}
+
+.buttons-rps button{
+    background-color: rgb(243, 195, 105);
+    padding:10px 70px;
+    border-radius: 1em;
+}
